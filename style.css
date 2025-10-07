@@ -1,66 +1,47 @@
 html {
-  background-color: #4c4c55;
+  background-color: #4C4C55;
   overflow: hidden;
 }
 
-/* ---- Search Bar Styles ---- */
-.search-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 20px auto 0;
+.header {
+  font-family: "Inter-Regular", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #c3c2c1;
+  text-align: center;
+  padding: 2rem;
 }
 
-.city-input {
+.city-select {
+  display: block;
+  margin: 40px auto;
   padding: 8px 12px;
-  width: 280px;
-  max-width: 80%;
   border-radius: 6px;
   border: 1px solid #4c4c55;
   background: #36363b;
   color: #c3c2c1;
   font-family: "Inter-Regular", Helvetica, sans-serif;
   font-size: 14px;
+  cursor: pointer;
+  appearance: none;
   text-align: center;
 }
 
-.city-input::placeholder {
-  color: #8f8f92;
+.city-select:hover {
+  border-color: #22a352;
 }
 
-.city-input:focus {
+.city-select:focus {
   outline: none;
   border-color: #22a352;
   background: #2d2d31;
 }
 
-.search-btn {
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: 1px solid #22a352;
-  background: #22a352;
-  color: #ffffff;
-  font-family: "Inter-Medium", Helvetica, sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.search-btn:hover {
-  background: #1a7f41;
-}
-
-.search-btn:active {
-  transform: scale(0.97);
-}
-
-/* ---- Widget (existing styles shortened) ---- */
 .box {
   position: relative;
   display: flex;
   margin: 0 auto;
-  margin-top: 25vh;
+  margin-top: 15vh;
   width: 669px;
   height: 309px;
 }
@@ -85,17 +66,27 @@ html {
   left: 10px;
   width: 649px;
   height: 248px;
+  display: flex;
   border-radius: 6px;
-  border: 1px solid #4c4c55;
+  border: 1px solid;
+  border-color: #4c4c55;
 }
 
-.vertical-line {
+.vertical-line{
   position: absolute;
   width: 1px;
   top: 50px;
   left: 190px;
   height: 248px;
   background-color: #4c4c55;
+  margin: 0 auto;
+}
+
+.line {
+  width: 1px;
+  height: 248px;
+  margin-left: 181px;
+  object-fit: cover;
 }
 
 .top-bar {
@@ -119,42 +110,79 @@ html {
   position: absolute;
   top: 12px;
   left: 21px;
-  color: #949395;
+  width: 118px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #949395;
   font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
 }
 
 .humid-percentage {
   position: absolute;
   top: 74px;
   left: 39px;
+  width: 122px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter-Bold", Helvetica;
   font-weight: 700;
   color: #22a352;
   font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
 .humid-status {
   position: absolute;
   top: 135px;
   left: 34px;
-  color: #c3c2c1;
+  width: 125px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #c3c2c1;
   font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-.icon1,
-.icon2,
-.icon3 {
+.icon1 {
+  left: 5.78%;
   position: absolute;
-  top: 64.72%;
   width: 5.33%;
   height: 17.48%;
+  top: 64.72%;
 }
 
-.icon1 { left: 5.78%; }
-.icon2 { left: 12.15%; }
-.icon3 { left: 18.52%; }
+.icon2 {
+  left: 12.15%;
+  position: absolute;
+  width: 5.33%;
+  height: 17.48%;
+  top: 64.72%;
+}
+
+.icon3 {
+  left: 18.52%;
+  position: absolute;
+  width: 5.33%;
+  height: 17.48%;
+  top: 64.72%;
+}
 
 .help {
   position: absolute;
@@ -162,14 +190,36 @@ html {
   left: 623px;
   width: 28px;
   height: 26px;
-  border-radius: 50%;
+  border-radius: 50px;
   text-align: center;
-  color: #c3c2c1;
-  border: 1px solid #c3c2c1;
+  color: #C3C2C1;
+  border: 1px solid #C3C2C1;
   background: #808080;
   cursor: pointer;
 }
-.help:hover { background: #575757; }
+
+.help:hover {
+  background: #575757;
+  border: 1px solid #808080;
+}
+
+.div {
+  position: absolute;
+  top: 4px;
+  left: 9px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #c3c2c1;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
 
 .description {
   position: absolute;
@@ -177,6 +227,9 @@ html {
   left: 221px;
   width: 408px;
   font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
   color: #a2a2a3;
   font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: normal;
 }
