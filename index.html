@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="header">Bambu Lab Style Humidity Widget</h1>
+    <h2 class="subhead"></h2>
+    <select id="city-select" class="city-select">
+      <option value="43.6532,-79.3832">Toronto</option>
+      <option value="40.7128,-74.0060">New York</option>
+      <option value="51.5074,-0.1278">London</option>
+      <option value="35.6895,139.6917">Tokyo</option>
+      <option value="48.8566,2.3522">Paris</option>
+      <option value="36.1699,-115.1398">Las Vegas</option>
+    </select>
+    
+    <div class="box">
+      <div class="widget">
+        <div class="widget-background"></div>
+        <div class="outlines"></div>
+        <div class="vertical-line"></div>img
+        <div class="top-bar">
+          <div class="rectangle"></div>
+          <div class="text-wrapper">Ambient Humidity</div>
+        </div>
+        <div class="humid-percentage">--%</div>
+        <div class="humid-status">Loading...</div>
+          <div class="humid-icongs">
+            <img class="icon1" src="img/icon_empty.svg" />
+            <img class="icon2" src="img/icon_empty.svg" />
+            <img class="icon3" src="img/icon_empty.svg" />
+          </div>
+        <a href="https://wiki.bambulab.com/en/filament-acc/filament/dry-filament" target="_blank">
+          <button class="help">?</button>
+        </a>
+        <p class="description">
+          Loading...
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
